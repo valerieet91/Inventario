@@ -1,0 +1,450 @@
+/* ==========================================================================
+   Variables globales y configuración base
+   ========================================================================== */
+:root {
+    --color-primary: #2563eb;
+    --color-primary-hover: #1d4ed8;
+    --color-secondary: #64748b;
+    --color-secondary-hover: #475569;
+    --color-success: #16a34a;
+    --color-warning: #d97706;
+    --color-danger: #dc2626;
+    --color-danger-hover: #b91c1c;
+    --color-bg: #f1f5f9;
+    --color-surface: #ffffff;
+    --color-text: #0f172a;
+    --color-text-muted: #64748b;
+    --color-border: #e2e8f0;
+    --radius-md: 10px;
+    --radius-sm: 6px;
+    --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08);
+    --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+/* ==========================================================================
+   Encabezado principal
+   ========================================================================== */
+.main-header {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: #ffffff;
+    padding: 1.5rem 0;
+    margin-bottom: 1.75rem;
+    box-shadow: var(--shadow-md);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.main-header h1 {
+    font-size: 1.65rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    margin-top: 0.2rem;
+}
+
+/* ==========================================================================
+   Tarjetas de indicadores (Resumen del inventario)
+   ========================================================================== */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+}
+
+.stat-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 1.15rem 1.25rem;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    border-left: 4px solid var(--color-primary);
+}
+
+.stat-card.stat-warning {
+    border-left-color: var(--color-warning);
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.stat-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+/* ==========================================================================
+   Layout principal (Formulario + Tabla)
+   ========================================================================== */
+.crud-layout {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    margin-bottom: 2.5rem;
+}
+
+.card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 1.5rem;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid var(--color-border);
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.card-header h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   Formulario (Create y Update)
+   ========================================================================== */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+}
+
+label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+    color: #334155;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="search"],
+select {
+    width: 100%;
+    padding: 0.62rem 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: var(--radius-sm);
+    font-size: 0.92rem;
+    color: var(--color-text);
+    background-color: #ffffff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.form-error {
+    background-color: #fef2f2;
+    color: var(--color-danger);
+    border: 1px solid #fecaca;
+    border-radius: var(--radius-sm);
+    padding: 0.6rem 0.75rem;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.form-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+}
+
+/* ==========================================================================
+   Botones y etiquetas (Badges)
+   ========================================================================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.65rem 1rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.btn-secondary {
+    background-color: #e2e8f0;
+    color: #1e293b;
+}
+
+.btn-secondary:hover {
+    background-color: #cbd5e1;
+}
+
+.btn-outline {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 0.9rem;
+    font-size: 0.85rem;
+}
+
+.btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-sm {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.82rem;
+}
+
+.btn-edit {
+    background-color: #eff6ff;
+    color: var(--color-primary);
+    border: 1px solid #bfdbfe;
+}
+
+.btn-edit:hover {
+    background-color: #dbeafe;
+}
+
+.btn-delete {
+    background-color: #fef2f2;
+    color: var(--color-danger);
+    border: 1px solid #fecaca;
+}
+
+.btn-delete:hover {
+    background-color: #fee2e2;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.22rem 0.6rem;
+    font-size: 0.76rem;
+    font-weight: 600;
+    border-radius: 999px;
+}
+
+.badge-create {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.badge-edit {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.badge-stock-ok {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.badge-stock-low {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.badge-stock-out {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* ==========================================================================
+   Tabla de inventario y filtros (Read y Delete)
+   ========================================================================== */
+.filters-bar {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.filters-bar input[type="search"] {
+    width: 230px;
+}
+
+.filters-bar select {
+    width: 190px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+}
+
+.inventory-table th,
+.inventory-table td {
+    padding: 0.85rem 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.inventory-table th {
+    background-color: #f8fafc;
+    font-weight: 600;
+    color: #475569;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.inventory-table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+.code-pill {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.82rem;
+    background-color: #f1f5f9;
+    padding: 0.2rem 0.45rem;
+    border-radius: 4px;
+    color: #334155;
+    font-weight: 600;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.45rem;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    color: var(--color-text-muted);
+}
+
+.empty-state p {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.35rem;
+    color: #334155;
+}
+
+/* ==========================================================================
+   Notificación Toast y Pie de página
+   ========================================================================== */
+.toast {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 0.85rem 1.25rem;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.2);
+    font-size: 0.9rem;
+    font-weight: 500;
+    z-index: 1000;
+    border-left: 4px solid var(--color-success);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.main-footer {
+    margin-top: auto;
+    padding: 1.25rem 0;
+    background-color: #ffffff;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   Diseño Responsivo (Móviles y Tablets)
+   ========================================================================== */
+@media (max-width: 920px) {
+    .crud-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .filters-bar {
+        width: 100%;
+    }
+
+    .filters-bar input[type="search"],
+    .filters-bar select {
+        flex: 1;
+        min-width: 160px;
+    }
+}

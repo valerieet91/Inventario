@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 360" width="100%" height="100%" font-family="Segoe UI, system-ui, sans-serif">
+  <rect width="1100" height="360" fill="#f1f5f9"/>
+
+  <g transform="translate(40, 25)">
+    <rect width="1020" height="310" rx="10" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="25" y="42" fill="#0f172a" font-size="18" font-weight="700">Listado de Inventario (Filtrado en tiempo real)</text>
+
+    <!-- Barra de búsqueda activa -->
+    <rect x="520" y="18" width="240" height="36" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <text x="534" y="41" fill="#0f172a" font-size="13" font-weight="600">ELEC</text>
+
+    <rect x="775" y="18" width="220" height="36" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="790" y="41" fill="#0f172a" font-size="13">Electrónica</text>
+
+    <line x1="25" y1="68" x2="995" y2="68" stroke="#e2e8f0"/>
+
+    <!-- Encabezado tabla -->
+    <rect x="25" y="82" width="970" height="36" fill="#f8fafc"/>
+    <text x="40" y="105" fill="#475569" font-size="12" font-weight="700">CÓDIGO</text>
+    <text x="150" y="105" fill="#475569" font-size="12" font-weight="700">PRODUCTO</text>
+    <text x="450" y="105" fill="#475569" font-size="12" font-weight="700">CATEGORÍA</text>
+    <text x="580" y="105" fill="#475569" font-size="12" font-weight="700">PRECIO</text>
+    <text x="680" y="105" fill="#475569" font-size="12" font-weight="700">STOCK</text>
+    <text x="820" y="105" fill="#475569" font-size="12" font-weight="700">SUBTOTAL</text>
+    <text x="910" y="105" fill="#475569" font-size="12" font-weight="700">ACCIONES</text>
+
+    <!-- Fila filtrada 1 -->
+    <line x1="25" y1="170" x2="995" y2="170" stroke="#e2e8f0"/>
+    <rect x="38" y="132" width="76" height="24" rx="4" fill="#f1f5f9"/>
+    <text x="76" y="148" fill="#334155" font-size="12" font-weight="700" text-anchor="middle">ELEC-101</text>
+    <text x="150" y="148" fill="#0f172a" font-size="13" font-weight="600">Teclado Mecánico RGB Compacto</text>
+    <text x="450" y="148" fill="#334155" font-size="13">Electrónica</text>
+    <text x="580" y="148" fill="#334155" font-size="13">$45.00</text>
+    <rect x="680" y="132" width="118" height="24" rx="12" fill="#dcfce7"/>
+    <text x="739" y="148" fill="#166534" font-size="11" font-weight="600" text-anchor="middle">14 uds • Disponible</text>
+    <text x="820" y="148" fill="#0f172a" font-size="13">$630.00</text>
+    <rect x="898" y="130" width="44" height="26" rx="4" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="920" y="147" fill="#2563eb" font-size="11" font-weight="600" text-anchor="middle">Editar</text>
+    <rect x="948" y="130" width="48" height="26" rx="4" fill="#fef2f2" stroke="#fecaca"/>
+    <text x="972" y="147" fill="#dc2626" font-size="11" font-weight="600" text-anchor="middle">Eliminar</text>
+
+    <!-- Fila filtrada 2 -->
+    <line x1="25" y1="225" x2="995" y2="225" stroke="#e2e8f0"/>
+    <rect x="38" y="187" width="76" height="24" rx="4" fill="#f1f5f9"/>
+    <text x="76" y="203" fill="#334155" font-size="12" font-weight="700" text-anchor="middle">ELEC-108</text>
+    <text x="150" y="203" fill="#0f172a" font-size="13" font-weight="600">Mouse Inalámbrico Ergonómico</text>
+    <text x="450" y="203" fill="#334155" font-size="13">Electrónica</text>
+    <text x="580" y="203" fill="#334155" font-size="13">$18.90</text>
+    <rect x="680" y="187" width="118" height="24" rx="12" fill="#dcfce7"/>
+    <text x="739" y="203" fill="#166534" font-size="11" font-weight="600" text-anchor="middle">25 uds • Disponible</text>
+    <text x="820" y="203" fill="#0f172a" font-size="13">$472.50</text>
+    <rect x="898" y="185" width="44" height="26" rx="4" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="920" y="202" fill="#2563eb" font-size="11" font-weight="600" text-anchor="middle">Editar</text>
+    <rect x="948" y="185" width="48" height="26" rx="4" fill="#fef2f2" stroke="#fecaca"/>
+    <text x="972" y="202" fill="#dc2626" font-size="11" font-weight="600" text-anchor="middle">Eliminar</text>
+  </g>
+</svg>

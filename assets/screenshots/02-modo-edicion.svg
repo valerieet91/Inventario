@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 500" width="100%" height="100%" font-family="Segoe UI, system-ui, sans-serif">
+  <rect width="1100" height="500" fill="#f1f5f9"/>
+
+  <!-- Formulario en Modo Edición (Update) -->
+  <g transform="translate(40, 30)">
+    <rect width="340" height="440" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="22" y="36" fill="#0f172a" font-size="17" font-weight="700">Editar Producto</text>
+    <rect x="225" y="18" width="92" height="24" rx="12" fill="#fef3c7"/>
+    <text x="271" y="34" fill="#92400e" font-size="11" font-weight="700" text-anchor="middle">Modo: Editar</text>
+    <line x1="22" y1="54" x2="318" y2="54" stroke="#e2e8f0"/>
+
+    <text x="22" y="80" fill="#334155" font-size="12" font-weight="600">Código / SKU *</text>
+    <rect x="22" y="88" width="296" height="36" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="34" y="111" fill="#0f172a" font-size="13" font-weight="600">ACC-204</text>
+
+    <text x="22" y="146" fill="#334155" font-size="12" font-weight="600">Nombre del producto *</text>
+    <rect x="22" y="154" width="296" height="36" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <text x="34" y="177" fill="#0f172a" font-size="13">Soporte Ajustable de Aluminio Pro</text>
+
+    <text x="22" y="212" fill="#334155" font-size="12" font-weight="600">Categoría *</text>
+    <rect x="22" y="220" width="296" height="36" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="34" y="243" fill="#0f172a" font-size="13">Accesorios</text>
+
+    <text x="22" y="278" fill="#334155" font-size="12" font-weight="600">Precio unitario ($) *</text>
+    <rect x="22" y="286" width="140" height="36" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="34" y="309" fill="#0f172a" font-size="13">24.90</text>
+
+    <text x="178" y="278" fill="#334155" font-size="12" font-weight="600">Stock disponible *</text>
+    <rect x="178" y="286" width="140" height="36" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="190" y="309" fill="#0f172a" font-size="13">12</text>
+
+    <rect x="22" y="342" width="296" height="38" rx="6" fill="#2563eb"/>
+    <text x="170" y="366" fill="#ffffff" font-size="13" font-weight="600" text-anchor="middle">Actualizar Cambios</text>
+
+    <rect x="22" y="390" width="296" height="36" rx="6" fill="#e2e8f0"/>
+    <text x="170" y="413" fill="#1e293b" font-size="13" font-weight="600" text-anchor="middle">Cancelar edición</text>
+  </g>
+
+  <!-- Panel explicativo visual -->
+  <g transform="translate(410, 30)">
+    <rect width="650" height="440" rx="10" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="30" y="42" fill="#0f172a" font-size="17" font-weight="700">Operación UPDATE (Actualización de registro)</text>
+    <line x1="30" y1="60" x2="620" y2="60" stroke="#e2e8f0"/>
+
+    <rect x="30" y="85" width="590" height="72" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="48" y="114" fill="#1e40af" font-size="13" font-weight="700">1. Selección desde la tabla</text>
+    <text x="48" y="138" fill="#475569" font-size="12">Al pulsar el botón "Editar" en una fila, la función prepararEdicion(id) carga los datos en el formulario.</text>
+
+    <rect x="30" y="175" width="590" height="72" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="48" y="204" fill="#92400e" font-size="13" font-weight="700">2. Validación y actualización en memoria + localStorage</text>
+    <text x="48" y="228" fill="#475569" font-size="12">Se valida que el código SKU no pertenezca a otro producto y se actualiza el registro en localStorage.</text>
+
+    <!-- Toast de confirmación -->
+    <rect x="190" y="365" width="430" height="48" rx="6" fill="#0f172a"/>
+    <rect x="190" y="365" width="5" height="48" rx="2" fill="#16a34a"/>
+    <text x="212" y="394" fill="#ffffff" font-size="13" font-weight="500">Producto "Soporte Ajustable de Aluminio Pro" actualizado con éxito.</text>
+  </g>
+</svg>
